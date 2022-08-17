@@ -25,6 +25,11 @@
     --fs-body: 1.125rem;
   }
 }
+@media (min-width: 1600px) {
+  html {
+    font-size: 24px;
+  }
+}
 /*****************
 * General Styles
 *****************/
@@ -152,6 +157,11 @@ strong {
     width: calc(100% + 1.5em);
   }
 }
+@media (min-width: 1600px) {
+  .intro__img {
+    min-width: 400px;
+  }
+}
 /*****************
 * Skills Section
 *****************/
@@ -233,6 +243,9 @@ strong {
   text-align: start;
   margin-bottom: 2em;
 }
+.about__btn {
+  margin-bottom: 2em;
+}
 
 @media (min-width: 600px) {
   .about {
@@ -257,6 +270,12 @@ strong {
     width: calc(100% + 2em);
     padding-left: 1em;
     padding-right: calc(200px + 4em);
+  }
+}
+@media (min-width: 1600px) {
+  .about {
+    max-width: 1420px;
+    grid-template-columns: 1fr 350px;
   }
 }
 

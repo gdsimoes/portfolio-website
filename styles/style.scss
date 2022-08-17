@@ -31,6 +31,13 @@
     }
 }
 
+@media (min-width: 1600px) {
+    // By doing this I can uniformly increase the font-size
+    html {
+        font-size: 24px;
+    }
+}
+
 /*****************
 * General Styles
 *****************/
@@ -174,6 +181,12 @@ strong {
     }
 }
 
+@media (min-width: 1600px) {
+    .intro__img {
+        min-width: 400px;
+    }
+}
+
 /*****************
 * Skills Section
 *****************/
@@ -269,6 +282,10 @@ strong {
             margin-bottom: 2em;
         }
     }
+
+    &__btn {
+        margin-bottom: 2em;
+    }
 }
 
 @media (min-width: 600px) {
@@ -300,5 +317,12 @@ strong {
         width: calc(100% + 2em);
         padding-left: 1em;
         padding-right: calc(200px + 4em);
+    }
+}
+
+@media (min-width: 1600px) {
+    .about {
+        max-width: 1420px;
+        grid-template-columns: 1fr 350px;
     }
 }
