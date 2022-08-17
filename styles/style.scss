@@ -132,6 +132,12 @@ strong {
     &--intro {
         text-transform: uppercase;
     }
+
+    &--projects {
+        color: var(--clr-accent);
+        font-weight: var(--fw-bold);
+        margin-bottom: 2em;
+    }
 }
 
 /****************
@@ -324,5 +330,81 @@ strong {
     .about {
         max-width: 1420px;
         grid-template-columns: 1fr 350px;
+    }
+}
+
+/*******************
+* Projects Section
+*******************/
+
+.projects {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    &__item {
+        background: var(--clr-accent);
+        overflow: hidden;
+
+        &:focus {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    &__img {
+        transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1),
+            opacity 250ms linear;
+
+        &:hover {
+            transform: scale(1.2);
+            opacity: 0.5;
+        }
+    }
+}
+
+/*********
+* Footer
+*********/
+
+.footer {
+    background: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 1em 0;
+    font-size: var(--fs-h2);
+
+    a {
+        color: inherit;
+    }
+}
+
+// .footer__link:hover,
+// .social-list__link:hover {
+//     opacity: 0.7;
+// }
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    // margin: 2em 0 0;
+    padding: 0;
+
+    &__item {
+        margin: 0 1em;
+    }
+
+    &__link {
+        padding: 0.5em;
+
+        &:hover {
+            opacity: 0.7;
+        }
     }
 }

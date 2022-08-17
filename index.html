@@ -21,12 +21,10 @@
         />
 
         <!-- Font Awesome -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-            integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+        <script
+            src="https://kit.fontawesome.com/841472d866.js"
             crossorigin="anonymous"
-        />
+        ></script>
 
         <!-- Favicons -->
         <link
@@ -94,6 +92,7 @@
         <!-- Skills -->
         <section class="skills" id="skills">
             <h2 class="section__title section__title--skills">My Skills</h2>
+            <!-- All icons in this section were downloaded from https://svgporn.com -->
             <div class="icons-container">
                 <div class="icons-container__icon">
                     <img src="images/skills-icons/html.svg" alt="HTML" />
@@ -166,10 +165,12 @@
             />
         </section>
 
-        <!-- My Work -->
+        <!-- Projects -->
         <section class="projects" id="projects">
             <h2 class="section__title">Projects</h2>
-            <p class="section__subtitle"></p>
+            <p class="section__subtitle section__subtitle--projects">
+                A selection of my personal projects
+            </p>
 
             <div class="portfolio">
                 <!-- Portfolio item 01 -->
@@ -265,14 +266,14 @@
         </section>
 
         <!-- Footer -->
-        <footer>
+        <footer class="footer">
             <ul class="social-list">
                 <li class="social-list__item">
                     <a
                         class="social-list__link"
                         href="mailto:portfolio.gds@gmail.com"
                     >
-                        a
+                        <i class="fa-solid fa-envelope"></i>
                     </a>
                 </li>
                 <li class="social-list__item">
@@ -280,7 +281,7 @@
                         class="social-list__link"
                         href="https://www.linkedin.com/in/gdsimoes/"
                     >
-                        c
+                        <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </li>
                 <li class="social-list__item">
@@ -288,7 +289,7 @@
                         class="social-list__link"
                         href="https://github.com/gdsimoes"
                     >
-                        d
+                        <i class="fa-brands fa-github"></i>
                     </a>
                 </li>
             </ul>
