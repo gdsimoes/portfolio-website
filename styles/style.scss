@@ -248,3 +248,57 @@ strong {
     background: var(--clr-light);
     opacity: 0.25;
 }
+
+/****************
+* About Section
+****************/
+
+.about {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    &__img {
+        box-shadow: var(--bs);
+    }
+
+    &__body {
+        text-align: center;
+
+        p {
+            text-align: start;
+            margin-bottom: 2em;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas:
+            "title img"
+            "subtitle img"
+            "text img";
+        column-gap: 2em;
+
+        &__img {
+            grid-area: img;
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    .section__title--about {
+        grid-area: title;
+    }
+
+    .section__subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+    }
+}
