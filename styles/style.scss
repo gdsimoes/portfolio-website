@@ -459,8 +459,11 @@ header {
 }
 
 .portfolio {
+    max-width: 1440px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    $n: 3; // Maximum number of columns
+    grid-template-columns: repeat(auto-fit, minmax(max(300px, 100% / $n), 1fr));
 
     &__item {
         background: var(--clr-accent);

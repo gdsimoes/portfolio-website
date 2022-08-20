@@ -407,8 +407,10 @@ header {
 }
 
 .portfolio {
+  max-width: 1440px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(max(300px, 33.3333333333%), 1fr));
 }
 .portfolio__item {
   background: var(--clr-accent);
