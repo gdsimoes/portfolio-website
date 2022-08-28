@@ -46,9 +46,14 @@ body {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 3em 2em;
 }
 
+@media (min-width: 930px) {
+  section {
+    padding: 5em 2em;
+  }
+}
 :focus {
   outline: 3px solid var(--clr-accent);
   outline-offset: 3px;
