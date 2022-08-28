@@ -20,6 +20,9 @@
 
     --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
         0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+
+    --hamb-width: 2em;
+    --hamb-height: 3px;
 }
 
 @media (min-width: 930px) {
@@ -28,6 +31,8 @@
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
+        --hamb-width: 4em;
+        --hamb-height: 6px;
     }
 }
 
@@ -164,6 +169,12 @@ header {
     max-width: 100px;
 }
 
+@media (min-width: 930px) {
+    .logo {
+        max-width: 230px;
+    }
+}
+
 .nav {
     position: fixed;
     background: var(--clr-dark);
@@ -212,9 +223,10 @@ header {
     border: 0;
     cursor: pointer;
     position: absolute;
-    right: 1em;
-    top: 1em;
+    right: calc(var(--hamb-width) / 2);
+    top: calc(var(--hamb-width) / 2 - var(--hamb-height));
     z-index: 1000;
+    height: calc(var(--hamb-height) * 6);
 }
 
 .nav-open {
@@ -230,7 +242,7 @@ header {
         transform: rotate(0.625turn);
 
         &::before {
-            transform: rotate(90deg) translateX(-6px);
+            transform: rotate(90deg) translateX(calc(var(--hamb-height) * (-2)));
         }
 
         &::after {
@@ -243,9 +255,9 @@ header {
 .hamburger::before,
 .hamburger::after {
     background: var(--clr-accent);
-    width: 2em;
-    height: 3px;
-    border-radius: 1em;
+    width: var(--hamb-width);
+    height: var(--hamb-height);
+    border-radius: calc(var(--hamb-width) / 2);
     transition: transform 250ms ease-in-out;
 }
 
@@ -262,11 +274,11 @@ header {
     }
 
     &::before {
-        top: 6px;
+        top: calc(var(--hamb-height) * 2);
     }
 
     &::after {
-        bottom: 6px;
+        bottom: calc(var(--hamb-height) * 2);
     }
 }
 
